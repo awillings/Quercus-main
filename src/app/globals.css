@@ -1,0 +1,206 @@
+:root {
+    --background-color: #dad7cd;
+    --text-color: #3a5a40;
+    --secondary-color: #3a5a40;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#Maple {
+    height: 4rem;
+    width: 4rem;
+}
+
+#Navigation-Bar {
+    width: calc(100vw - 10rem);
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    z-index: 1;
+    border-radius: 1rem;
+}
+
+#Navigation {
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 14px; 
+    width: 100vw;
+    float: right;
+    padding: 1rem;
+}
+
+#Logo {
+    align-self: center;
+    width: 1rem;
+    padding: 0rem;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#Left-Nav {
+    display: inline-flex;
+    align-self: center;
+    justify-content: space-around;
+    width: 20rem;
+    margin-left: 2rem;
+    max-width: 25rem;
+}
+
+#Left-Nav > li {
+    display: inline-flex;
+    float: left;
+    list-style: none;
+}
+
+#Right-Nav {
+    display: inline-flex;
+    align-self: center;
+    justify-content: space-around;
+    width: 10rem;
+}
+
+#Right-Nav > li {
+    display: inline-flex;
+    float: right;
+    list-style: none;
+}
+
+.Processing {
+    position: absolute;
+    top: 10rem;
+    width: 100vw;
+    text-align: center;
+}
+
+.Organism {
+    position: absolute;
+    padding-top: 7rem;
+    padding-left: 2rem;
+    display: inline-flex;
+    width: calc(100vw - 10rem);
+    height: 100%;
+    /* margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0; */
+    margin-left: 5rem;
+    justify-content: center;
+}
+
+.Organism-Photo {
+    width: 40%;
+    text-align: center;
+    max-width: 400px;
+}
+
+#Plant-Photo {
+    position: block;
+    margin-top: 1rem;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding: .2rem;
+    background-color: var(--secondary-color);
+}
+
+.Information {
+    width: 100%;
+    margin-left: 2rem;
+}
+
+.Information > * {
+    display: block;
+    width: 80%;
+}
+
+#Common-Name {
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 50px;
+}
+
+#Scientific-Name {
+    text-transform: capitalize;
+    font-style: italic;
+    color: gray;
+}
+
+#Photo-Info {
+    text-transform: capitalize;
+    color: var(--text-color);
+    margin-left: .25rem;
+    font-size: medium;
+    font-style: italic;
+}
+
+.Button-Group {
+
+}
+
+button {
+    width: 45%;
+    height: 2rem;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: 3px solid var(--secondary-color);
+}
+
+.Information-Element {
+    margin-bottom: .5rem;
+}
+
+.Quiz-Input {
+    height: 2rem;
+    width: 80%;
+    border: 0px solid;
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border-radius: 1px;
+}
+
+.Quiz-Input:focus {
+    background-color: #a3b18a;
+}
+
+.Quiz-Input, select, textarea {
+    color: var(--text-color);
+    outline: none;
+    font-weight: bold;
+}
+
+.Quiz {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.Quiz > ul {
+    list-style: none;
+}
+
+.Quiz-Item {
+    margin-bottom: 1rem;
+}

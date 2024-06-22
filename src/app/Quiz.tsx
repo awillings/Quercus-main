@@ -1,27 +1,27 @@
 import QuizQuestion from "./QuizQuestion";
 
-export default function Quiz(organism) {
+export default function Quiz({occurenceData, speciesData, index}: {occurenceData: any, speciesData: any, index: number}) {
 
     return (
         <div className="Quiz">
             <ul>
                 <li className="Quiz-Item">
-                <QuizQuestion context={"Kingdom"} organism={organism}></QuizQuestion>               
+                <QuizQuestion context={"Kingdom"} occurenceData={occurenceData} index={index}></QuizQuestion>               
                 </li>
                 <li className="Quiz-Item">
-                    <QuizQuestion context={"Phylum"} organism={organism}></QuizQuestion>       
+                    <QuizQuestion context={"Phylum"} occurenceData={occurenceData} index={index}></QuizQuestion>       
                 </li>
                 <li className="Quiz-Item">
-                    <QuizQuestion context={"Order"} organism={organism}></QuizQuestion>               
+                    <QuizQuestion context={"Order"} occurenceData={occurenceData} index={index}></QuizQuestion>               
                 </li>
                 <li className="Quiz-Item">
-                    <QuizQuestion context={"Family"} organism={organism}></QuizQuestion>                
+                    <QuizQuestion context={"Family"} occurenceData={occurenceData} index={index}></QuizQuestion>                
                 </li>
                 <li className="Quiz-Item">
-                    <QuizQuestion context={"Genus"} organism={organism}></QuizQuestion>                
+                    <QuizQuestion context={"Genus"} occurenceData={occurenceData} index={index}></QuizQuestion>                
                 </li>
                 <li className="Quiz-Item">
-                    <QuizQuestion context={"Species"} organism={organism}></QuizQuestion>                   
+                    <QuizQuestion context={"Species"} occurenceData={occurenceData} index={index}></QuizQuestion>                   
                 </li>
             </ul>
         </div>

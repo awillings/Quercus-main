@@ -7,76 +7,61 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
-
 }
 
 body {
     background-color: var(--background-color);
 }
 
-#Maple {
-    height: 4rem;
-    width: 4rem;
+#Options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: wrapa;
 }
 
-#Navigation-Bar {
-    width: calc(100vw - 10rem);
-    position: fixed;
-    top: 1rem;
-    left: 5rem;
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--secondary-color);
-    color: white;
-    z-index: 1;
-    border-radius: 1rem;
-}
-
-#Navigation {
-    position: relative;
-    display: inline-flex;
-    justify-content: space-between;
-    font-size: 14px; 
-    width: 100vw;
-    float: right;
-    padding: 1rem;
+#Options > * {
+    margin: 0rem 1rem 1rem 0rem;
+    justify-content: space-around;
 }
 
 #Logo {
-    align-self: center;
-    width: 1rem;
-    padding: 0rem;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#Left-Nav {
+    background-color: var(--secondary-color);
     display: inline-flex;
-    align-self: center;
-    justify-content: space-around;
-    width: 20rem;
-    margin-left: 2rem;
-    max-width: 25rem;
-}
-
-#Left-Nav > li {
-    display: inline-flex;
-    float: left;
-    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+    color: var(--background-color);
+    font-weight: 700;
 }
 
 #Right-Nav {
     display: inline-flex;
-    align-self: center;
-    justify-content: space-around;
-    width: 10rem;
+    align-items: center;
 }
 
-#Right-Nav > li {
+#Left-Nav {
+    float: left;
     display: inline-flex;
-    float: right;
-    list-style: none;
+    align-items: center;
+}
+
+nav {
+    display: inline-flex;
+    align-items: center;
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: .5vh;
+    justify-content: space-between;
+}
+
+nav > div > * {
+    margin-right: 1rem;
+    align-items: center;
 }
 
 .Processing {
@@ -87,45 +72,39 @@ body {
 }
 
 .Organism {
-    position: absolute;
-    padding-top: 7rem;
-    padding-left: 2rem;
+    position: relative;
     display: inline-flex;
-    width: calc(100vw - 10rem);
-    height: 100%;
-    /* margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0; */
-    margin-left: 5rem;
-    justify-content: center;
+    width: 92vw;
+    height: 82vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    justify-content: space-between; 
 }
 
-.Organism-Photo {
-    width: 40%;
-    text-align: center;
-    max-width: 400px;
+.Left-Panel {
+    width: calc(50% - 1rem);
+    text-align: right;
+}
+
+a {
+    color: var(--secondary-color)
 }
 
 #Plant-Photo {
     position: block;
-    margin-top: 1rem;
+    margin-top: .5rem;
     object-fit: contain;
     max-width: 100%;
     max-height: 90%;
-    width: auto;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    padding: .2rem;
     background-color: var(--secondary-color);
+}
+
+.Right-Panel {
+    width: calc(50% - 1rem);
 }
 
 .Information {
     width: 100%;
-    margin-left: 2rem;
 }
 
 .Information > * {
@@ -153,12 +132,17 @@ body {
     font-style: italic;
 }
 
-.Button-Group {
-
+#Button-Group {
+    position: relative;
+    width: 25%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: 37.5%;
+    
 }
 
 button {
-    width: 45%;
+    width: 40%;
     height: 2rem;
     margin: 1px;
     border-radius: 5px;
@@ -175,9 +159,9 @@ button {
     height: 2rem;
     width: 80%;
     border: 0px solid;
-    background-color: var(--background-color);
-    border-bottom: 2px solid var(--secondary-color);
-    border-radius: 1px;
+    background-color: #eeebe2;
+    margin: .25rem;
+    border-radius: 5px;
 }
 
 .Quiz-Input:focus {
@@ -188,11 +172,11 @@ button {
     color: var(--text-color);
     outline: none;
     font-weight: bold;
+    padding-left: .5rem;
 }
 
 .Quiz {
-    margin-left: 2rem;
-    margin-top: 2rem;
+    width: 100%;
     color: var(--text-color);
     font-weight: bold;
 }
@@ -203,4 +187,25 @@ button {
 
 .Quiz-Item {
     margin-bottom: 1rem;
+}
+
+.Gear-Icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .5rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+.Gear-Icon:hover {
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border: 3px solid var(--background-color);
+}
+
+.Hidden {
+    visibility: hidden;
 }

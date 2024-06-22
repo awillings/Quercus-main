@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ['400', '700']
+ });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,24 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-      
-      <div id="Navigation-Bar">
-        <h1 id="Logo"></h1>
-        <FontAwesomeIcon id="Maple" icon={faLeaf}/>
-        <div id="Navigation">
-          <ul id="Left-Nav">
-            <li>Daily Challenge</li>
-            <li>Practice</li>
-            <li>Learn</li>
-          </ul>
-          <ul id="Right-Nav" >
-            <li>Login</li>
-            <li>Register</li>
-          </ul>
-      </div>
-      </div>
-      <div className={inter.className}>{children}</div>      
+      <body className={raleway.className}>
+        <div>{children}</div>      
       </body>
     </html>
   );
